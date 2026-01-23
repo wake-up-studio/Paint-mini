@@ -16,50 +16,128 @@ body{
 /*************************/
 /*HEADER*/
 /*************************/
+body{
+    background-color: #07311d;
+    color: #eedfbb;
+}
+
+/*************************/
+/*HEADER*/
+/*************************/
 .header{
-    width: 100%;
-    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    position: fixed;
+    margin: -7.6rem 25%;
+    border-radius: 50px;
     font-family: helvetica;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 3rem;
+    background: rgba(255, 255, 255, 0.44);
+    backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.header h1{
+h1{
     font-size: 3rem;
+    color: #07311d;
 }
 
-.header h2{
+h2{
+    font-size: 1.5rem;
+    color: #07311d;
+}
+
+.title{
+    text-align: left;
+    width: 50%;
+}
+
+.nbrs{
+    text-align: right;
+    color: #07311D;
+    font-size: 2rem;
+}
+
+.nbrs input{
+    width: 10%;
+    height: 40px;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.nbrs button{
+    background-color: aliceblue;
+    padding: 0.5rem 1.5rem;
+    font-family: helvetica;
+    border-radius: 50px;
     font-size: 2rem;
 }
 
 /*************************/
 /*LAYOUT*/
 /*************************/
-.drawing-grid{
+main{
     display: flex;
-    width: 960px;
-    height: 640px;
-    margin: 1em auto;
-    flex-wrap: wrap;
+    width : 1200px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10rem auto 0;
+}
+
+.drawing-grid{
+    display: grid;
+    grid-template: repeat(20, 1fr)/repeat(30, 1fr);
     outline: 3px solid black;
+    order: 1;
+    margin: 3rem 0;
 }
 
 .drawing-grid div{
     width: 32px;
     height: 32px;
-    background-color: aliceblue;
-    border: dashed 1px grey;
+    background-color: white;
+    border: dashed 1px lightgrey;
 }
+
+/*************************/
+/*PICKER*/
+/*************************/
 
 .picker{
     display: flex;
-    padding: 1rem;
     justify-content: center;
+    border: none;
+    margin: 3rem 0;
 }
 
 .picker input{
-    width: 20%;
-    height: 5rem;
+    width: 5rem;
+    height: 640px;
+    border: none;
+    padding: 0;
+}
+
+/*************************/
+/*TOOLS*/
+/*************************/
+.tools{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 5rem;
+    height: 640px;
+    order: 2;
+    text-align: center;
+    gap: 1em;
+    margin: 3rem 0;
+}
+
+.tools img{
+    width: 80%;
+    height: auto;
 }
 
 /*************************/
@@ -67,7 +145,7 @@ body{
 /*************************/
 .footer{
     text-align: center;
-    padding: 1rem;
+    padding-bottom: 1rem;
 }
 
 #reset{
@@ -75,5 +153,5 @@ body{
     padding: 0.5rem 1.5rem;
     font-family: helvetica;
     border-radius: 50px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }

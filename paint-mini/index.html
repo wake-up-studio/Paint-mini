@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <title>Paint Minimaliste en JS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <header class="header" id="header">
-        <h1>Paint en JS</h1>
-        <h2>Profites-en pour dessiner un mouton</h2>
+        <div class="title">
+            <h1>Paint en JS</h1>
+            <h2>Profites-en pour dessiner un mouton</h2>
+        </div>
+        <div class="nbrs">
+            <label for="cols">Colonnes</label>
+            <input type="text" name="cols" id="cols">
+            <label for="rows">Lignes</label>
+            <input type="text" name="rows" id="rows">
+            <button type="submit" id="submit">Appliquer</button>
+        </div>
+        
     </header>
     <main class="main">
         <div class="drawing-grid">
@@ -19,10 +29,15 @@
         <div class="picker" id="picker">
             
         </div>
+        <div class="tools">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.MAMP6ICJP7arqnF9ukPy8wAAAA?pid=Api" alt="gomme" id="eraser"/>
+            <img src="https://pixelpainter.studio/assets/img/paintbucket.png" alt="Pot de peinture" id="bucket">
+        </div>
     </main>
     <footer class="footer">
         <button id="reset">Reset</button>
+        
     </footer>
 </body>
-<script type="text/javascript" src="src/js/index.js"></script>
+<script type="module" src="src/js/index.js"></script>
 </html>
